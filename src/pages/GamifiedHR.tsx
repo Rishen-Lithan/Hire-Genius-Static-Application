@@ -176,7 +176,7 @@ const GamifiedHR = () => {
                   Dynamic Questioning
                 </h3>
                 <p className="text-gray-600">
-                  Questions are dynamically generated based on the candidate's
+                  Questions are dynamically assigned based on the candidate's
                   category, ensuring relevant assessment of skills and
                   experience.
                 </p>
@@ -223,7 +223,7 @@ const GamifiedHR = () => {
               <div className="order-1 mb-6 md:w-1/2 md:pr-12 md:mb-0 md:text-right md:order-1">
                 <div className="p-4 bg-white rounded-lg shadow-md">
                   <p className="text-gray-700">
-                    Responses are stored in MongoDB, allowing HR teams to
+                    Responses are stored in Firebase, allowing HR teams to
                     download comprehensive answer sheets for review and
                     analysis.
                   </p>
@@ -250,7 +250,8 @@ const GamifiedHR = () => {
                 </h3>
                 <p className="text-gray-600">
                   A final interactive mini-game assesses soft skills such as
-                  decision-making, teamwork, and problem-solving abilities.
+                  decision-making, teamwork, and problem-solving abilities also the knowledge of
+                  project management, devOps & software development.
                 </p>
               </div>
               <div className="z-10 flex items-center justify-center w-10 h-10 font-bold text-white bg-blue-600 rounded-full md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
@@ -313,7 +314,7 @@ const GamifiedHR = () => {
                   <div>
                     <div className="flex justify-between mb-1">
                       <span className="text-gray-700">K-Nearest Neighbors</span>
-                      <span className="font-medium text-blue-600">89%</span>
+                      <span className="font-medium text-blue-600">88%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -326,7 +327,7 @@ const GamifiedHR = () => {
                       <span className="text-gray-700">
                         Multi-Layer Perceptron
                       </span>
-                      <span className="font-medium text-blue-600">91%</span>
+                      <span className="font-medium text-blue-600">16%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -357,7 +358,7 @@ const GamifiedHR = () => {
                   <div>
                     <div className="flex justify-between mb-1">
                       <span className="text-gray-700">Precision</span>
-                      <span className="font-medium text-blue-600">94.8%</span>
+                      <span className="font-medium text-blue-600">95%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -368,7 +369,7 @@ const GamifiedHR = () => {
                   <div>
                     <div className="flex justify-between mb-1">
                       <span className="text-gray-700">Recall</span>
-                      <span className="font-medium text-blue-600">93.5%</span>
+                      <span className="font-medium text-blue-600">95%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -379,7 +380,7 @@ const GamifiedHR = () => {
                   <div>
                     <div className="flex justify-between mb-1">
                       <span className="text-gray-700">F1 Score</span>
-                      <span className="font-medium text-blue-600">94.1%</span>
+                      <span className="font-medium text-blue-600">95%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -390,7 +391,7 @@ const GamifiedHR = () => {
                   <div>
                     <div className="flex justify-between mb-1">
                       <span className="text-gray-700">Cross-Validation</span>
-                      <span className="font-medium text-blue-600">93.8%</span>
+                      <span className="font-medium text-blue-600">94%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -473,7 +474,7 @@ const GamifiedHR = () => {
                 Streamlined HR Process
               </h3>
               <p className="text-gray-600">
-                The automated system with MongoDB integration streamlines the HR
+                The automated system with Firebase integration streamlines the HR
                 evaluation process, making it more efficient and data-driven.
               </p>
               <ul className="mt-4 space-y-2 text-gray-700">

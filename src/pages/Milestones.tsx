@@ -58,9 +58,17 @@ const Milestones = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen relative overflow-hidden bg-gradient-to-b from-white to-blue-50">
+      {/* Floating Background Bubbles */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div className="absolute w-32 h-32 bg-blue-200 rounded-full opacity-30 animate-pulse-slow top-10 left-10"></div>
+        <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-20 animate-pulse-medium bottom-20 right-20"></div>
+        <div className="absolute w-20 h-20 bg-blue-400 rounded-full opacity-25 animate-pulse-fast top-1/3 left-1/3"></div>
+        <div className="absolute w-28 h-28 bg-blue-100 rounded-full opacity-30 animate-pulse-slow bottom-10 left-1/4"></div>
+      </div>
+
       {/* Milestone Page Header Section */}
-      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-700 py-20 text-center text-white">
+      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-700 py-20 text-center text-white relative z-10">
         <div className="max-w-4xl mx-auto px-4">
           {/* Icon */}
           <div className="flex justify-center mb-6">
@@ -78,7 +86,7 @@ const Milestones = () => {
       </div>
 
       {/* Timeline Section */}
-      <div className="bg-gradient-to-b from-white to-blue-50 py-16">
+      <div className="py-16 relative z-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-blue-700 relative inline-block">
@@ -110,7 +118,7 @@ const Milestones = () => {
                   transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
                   <div className="w-1/2 px-6">
-                    <div className="bg-white border border-blue-100 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div className="bg-white border border-blue-100 rounded-xl p-6 shadow-md hover:shadow-2xl transform hover:scale-105 transition-all duration-500 ease-in-out backdrop-blur-sm bg-opacity-90">
                       <div className="text-sm font-semibold text-white bg-blue-600 inline-block px-3 py-1 rounded-full mb-2">
                         MILESTONE {index + 1}
                       </div>

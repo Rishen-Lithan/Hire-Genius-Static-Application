@@ -1,354 +1,370 @@
 import React from 'react';
-import { UsersIcon, BookOpenIcon, GraduationCapIcon } from 'lucide-react';
+import { Users, BookOpen, GraduationCap, ArrowUpRight, Sparkles, Brain, Code, Database, Palette, Server, ArrowUpRightIcon } from 'lucide-react';
+
 const About = () => {
-  return <div className="w-full bg-white">
-      {/* Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  return (
+    <div className="w-full overflow-hidden bg-gray-50">
+      {/* Hero Section with Floating Elements */}
+      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute w-32 h-32 bg-white rounded-full top-20 left-10 bg-opacity-5 animate-pulse"></div>
+          <div className="absolute w-24 h-24 bg-white rounded-full top-40 right-20 bg-opacity-10 animate-bounce"></div>
+          <div className="absolute w-16 h-16 bg-blue-300 rounded-full bottom-20 left-1/4 bg-opacity-20 animate-pulse"></div>
+          <div className="absolute w-20 h-20 bg-white rounded-full top-1/3 right-1/3 bg-opacity-5 animate-ping"></div>
+        </div>
+        
+        <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
-            <UsersIcon className="h-16 w-16 mb-6" />
-            <h1 className="text-4xl font-bold mb-4">About HireGenius</h1>
-            <p className="text-xl max-w-3xl">
-              Learn about our research team and the development of our automated
-              interviewing system for software engineers.
+            <div className="relative mb-8">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-400 to-blue-200 animate-spin opacity-20"></div>
+              </div>
+              <Users className="relative w-20 h-20 mb-2 animate-bounce" />
+              <Sparkles className="absolute w-8 h-8 text-yellow-300 -top-2 -right-2 animate-pulse" />
+            </div>
+            <h1 className="mb-6 text-6xl font-black text-transparent bg-gradient-to-r from-white to-blue-200 bg-clip-text">
+              About HireGenius
+            </h1>
+            <p className="max-w-4xl text-2xl leading-relaxed text-blue-100">
+              Discover our revolutionary AI-powered research in automated interviewing 
+              for software engineers
             </p>
+            <div className="flex mt-8 space-x-4">
+              <div className="px-6 py-3 text-sm font-medium bg-white rounded-full bg-opacity-20 backdrop-blur-sm">
+                🚀 Research Innovation
+              </div>
+              <div className="px-6 py-3 text-sm font-medium bg-white rounded-full bg-opacity-20 backdrop-blur-sm">
+                🤖 AI Technology
+              </div>
+              <div className="px-6 py-3 text-sm font-medium bg-white rounded-full bg-opacity-20 backdrop-blur-sm">
+                💡 Smart Solutions
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      {/* Project Overview */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-12 items-start">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-              <p className="text-gray-600 mb-6">
-                HireGenius is an advanced automated candidate selection and
-                interview system designed to revolutionize the hiring process
-                for software engineers. Our research addresses the critical
-                challenge of recruiting qualified technical talent efficiently
-                and objectively.
-              </p>
-              <p className="text-gray-600 mb-6">
-                Traditional manual screening methods are often time-consuming,
-                subjective, and inconsistent. For software engineering roles,
-                it's essential to thoroughly assess programming skills, academic
-                performance, and personality traits to identify the best
-                candidates.
-              </p>
-              <p className="text-gray-600">
-                Our system leverages artificial intelligence, natural language
-                processing, and deep learning to create a comprehensive solution
-                that evaluates candidates across multiple dimensions, providing
-                a more accurate and efficient hiring process.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 flex items-center">
-                  <BookOpenIcon className="h-6 w-6 text-blue-600 mr-2" />
-                  Research Publication
-                </h3>
-                <div className="bg-white p-4 rounded-md border border-gray-200">
-                  <p className="text-gray-800 font-medium">
-                    HireGenius: Automated Interviewing System for Software
-                    Engineers
-                  </p>
-                  <p className="text-gray-600 mt-2">
-                    N. A. Hewamadduma, G. K. Nalinka, N. T. M. A. S. M.
-                    Mahawaththa, S. R.T.L Rosa, D. I. De Silva, P. Gunathilake
-                  </p>
-                  <p className="text-gray-600 mt-2">
-                    Sri Lanka Institute of Information Technology, Malabe, Sri
-                    Lanka
-                  </p>
-                  <p className="text-gray-600 mt-2">
-                    <span className="font-medium">Contact:</span>{' '}
-                    nuwandihewamadduma@gmail.com
+
+      {/* Project Overview with Cards */}
+      <section className="relative py-20">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid items-start grid-cols-1 gap-16 lg:grid-cols-2">
+            <div className="space-y-8">
+              <div className="relative">
+                <h2 className="mb-8 text-5xl font-black text-gray-900">
+                  Project 
+                  <span className="text-transparent bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text">
+                    Overview
+                  </span>
+                </h2>
+                <div className="absolute w-12 h-12 bg-blue-100 rounded-full opacity-50 -top-4 -left-4"></div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="p-6 transition-all duration-300 bg-white border-l-4 border-blue-600 shadow-lg group rounded-2xl hover:shadow-xl">
+                  <h3 className="mb-3 text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-700">
+                    🎯 The Challenge
+                  </h3>
+                  <p className="leading-relaxed text-gray-600">
+                    Traditional manual screening methods are time-consuming, subjective, and inconsistent. 
+                    For software engineering roles, thorough assessment of programming skills, academic 
+                    performance, and personality traits is essential.
                   </p>
                 </div>
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    Research Focus Areas:
-                  </h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
-                        <span className="block h-2 w-2 rounded-full bg-blue-600"></span>
-                      </div>
-                      <span className="text-gray-700">
-                        Machine Learning & Deep Learning
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
-                        <span className="block h-2 w-2 rounded-full bg-blue-600"></span>
-                      </div>
-                      <span className="text-gray-700">
-                        Natural Language Processing
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
-                        <span className="block h-2 w-2 rounded-full bg-blue-600"></span>
-                      </div>
-                      <span className="text-gray-700">Ensemble Learning</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-blue-100 p-1 rounded-full mr-2 mt-1">
-                        <span className="block h-2 w-2 rounded-full bg-blue-600"></span>
-                      </div>
-                      <span className="text-gray-700">
-                        Human-Computer Interaction
-                      </span>
-                    </li>
-                  </ul>
+
+                <div className="p-6 transition-all duration-300 bg-white border-l-4 border-blue-700 shadow-lg group rounded-2xl hover:shadow-xl">
+                  <h3 className="mb-3 text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-700">
+                    🧠 Our Solution
+                  </h3>
+                  <p className="leading-relaxed text-gray-600">
+                    HireGenius leverages artificial intelligence, natural language processing, 
+                    and deep learning to create a comprehensive solution that evaluates candidates 
+                    across multiple dimensions.
+                  </p>
+                </div>
+
+                <div className="p-6 transition-all duration-300 bg-white border-l-4 border-blue-800 shadow-lg group rounded-2xl hover:shadow-xl">
+                  <h3 className="mb-3 text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-700">
+                    🚀 The Impact
+                  </h3>
+                  <p className="leading-relaxed text-gray-600">
+                    Our system provides a more accurate and efficient hiring process, 
+                    revolutionizing how companies identify and recruit qualified technical talent.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Research Publication Card */}
+            <div className="relative">
+              <div className="sticky top-8">
+                <div className="p-8 border border-gray-100 shadow-2xl bg-gradient-to-br from-gray-50 to-white rounded-3xl">
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 mr-4 bg-blue-100 rounded-xl">
+                      <BookOpen className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Research Publication</h3>
+                  </div>
+                  
+                  <div className="p-6 mb-6 bg-white border border-gray-100 shadow-sm rounded-2xl">
+                    <h4 className="mb-3 text-lg font-bold text-gray-900">
+                      HireGenius: Automated Interviewing System for Software Engineers
+                    </h4>
+                    <p className="mb-3 text-sm text-gray-600">
+                      N. A. Hewamadduma, G. K. Nalinka, N. T. M. A. S. M. Mahawaththa, 
+                      S. R.T.L Rosa, D. I. De Silva, P. Gunathilake
+                    </p>
+                    <p className="mb-3 text-sm text-gray-500">
+                      Sri Lanka Institute of Information Technology, Malabe, Sri Lanka
+                    </p>
+                    <div className="flex items-center text-sm font-medium text-blue-600">
+                      <span>📧 nuwandihewamadduma@gmail.com</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="mb-4 text-lg font-bold text-gray-900">Research Focus Areas</h4>
+                    <div className="grid grid-cols-1 gap-3">
+                      {[
+                        { icon: "🧠", text: "Machine Learning & Deep Learning" },
+                        { icon: "💬", text: "Natural Language Processing" },
+                        { icon: "🔗", text: "Ensemble Learning" },
+                        { icon: "👥", text: "Human-Computer Interaction" }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-center p-3 transition-colors bg-blue-50 rounded-xl hover:bg-blue-100">
+                          <span className="mr-3 text-xl">{item.icon}</span>
+                          <span className="font-medium text-gray-700">{item.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* Team Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Research Team
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-                  <span className="text-blue-600 text-2xl font-bold">NH</span>
-                </div>
-                <h3 className="text-xl font-semibold">N. A. Hewamadduma</h3>
-                <p className="text-gray-600">Lead Researcher</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-700 mb-3">
-                  Specialized in machine learning models and system architecture
-                  design.
-                </p>
-                <div className="flex justify-center space-x-2">
-                  <a href="mailto:nuwandihewamadduma@gmail.com" className="text-blue-600 hover:text-blue-800">
-                    Email
-                  </a>
-                  <span className="text-gray-300">|</span>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Team Member 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-                  <span className="text-blue-600 text-2xl font-bold">GK</span>
-                </div>
-                <h3 className="text-xl font-semibold">G. K. Nalinka</h3>
-                <p className="text-gray-600">NLP Specialist</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-700 mb-3">
-                  Focused on natural language processing and text analysis
-                  components.
-                </p>
-                <div className="flex justify-center space-x-2">
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    Email
-                  </a>
-                  <span className="text-gray-300">|</span>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Team Member 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-                  <span className="text-blue-600 text-2xl font-bold">NM</span>
-                </div>
-                <h3 className="text-xl font-semibold">
-                  N. T. M. A. S. M. Mahawaththa
-                </h3>
-                <p className="text-gray-600">Data Scientist</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-700 mb-3">
-                  Specialized in data analysis and ensemble learning techniques.
-                </p>
-                <div className="flex justify-center space-x-2">
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    Email
-                  </a>
-                  <span className="text-gray-300">|</span>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Team Member 4 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-                  <span className="text-blue-600 text-2xl font-bold">SR</span>
-                </div>
-                <h3 className="text-xl font-semibold">S. R.T.L Rosa</h3>
-                <p className="text-gray-600">UI/UX Designer</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-700 mb-3">
-                  Led the development of the gamified interview experience and
-                  interface design.
-                </p>
-                <div className="flex justify-center space-x-2">
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    Email
-                  </a>
-                  <span className="text-gray-300">|</span>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Team Member 5 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-                  <span className="text-blue-600 text-2xl font-bold">DD</span>
-                </div>
-                <h3 className="text-xl font-semibold">D. I. De Silva</h3>
-                <p className="text-gray-600">Backend Developer</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-700 mb-3">
-                  Responsible for system integration and database management.
-                </p>
-                <div className="flex justify-center space-x-2">
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    Email
-                  </a>
-                  <span className="text-gray-300">|</span>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    LinkedIn
-                  </a>
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-5xl font-black text-gray-900">
+              Meet Our 
+              <span className="text-transparent bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text">
+                Research Team
+              </span>
+            </h2>
+            <p className="max-w-2xl mx-auto text-xl text-gray-600">
+              Brilliant minds working together to revolutionize AI-powered recruitment
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { 
+                initials: "NH", 
+                name: "N. A. Hewamadduma", 
+                role: "Lead Researcher", 
+                description: "Specialized in machine learning models and system architecture design.",
+                email: "nuwandihewamadduma@gmail.com",
+                icon: Brain,
+                gradient: "from-blue-500 to-blue-700"
+              },
+              { 
+                initials: "GK", 
+                name: "G. K. Nalinka", 
+                role: "NLP Specialist", 
+                description: "Focused on natural language processing and text analysis components.",
+                email: "#",
+                icon: Code,
+                gradient: "from-blue-600 to-blue-800"
+              },
+              { 
+                initials: "NM", 
+                name: "N. T. M. A. S. M. Mahawaththa", 
+                role: "Data Scientist", 
+                description: "Specialized in data analysis and ensemble learning techniques.",
+                email: "#",
+                icon: Database,
+                gradient: "from-blue-500 to-blue-700"
+              },
+              { 
+                initials: "SR", 
+                name: "S. R.T.L Rosa", 
+                role: "UI/UX Designer", 
+                description: "Led the development of the gamified interview experience and interface design.",
+                email: "#",
+                icon: Palette,
+                gradient: "from-blue-600 to-blue-800"
+              },
+              { 
+                initials: "DD", 
+                name: "D. I. De Silva", 
+                role: "Backend Developer", 
+                description: "Responsible for system integration and database management.",
+                email: "#",
+                icon: Server,
+                gradient: "from-blue-500 to-blue-700"
+              },
+              { 
+                initials: "PG", 
+                name: "P. Gunathilake", 
+                role: "Research Supervisor", 
+                description: "Faculty supervisor providing guidance and academic oversight.",
+                email: "#",
+                icon: GraduationCap,
+                gradient: "from-blue-600 to-blue-800"
+              }
+            ].map((member, index) => (
+              <div key={index} className="group">
+                <div className="p-8 transition-all duration-500 transform bg-white border border-gray-100 shadow-lg rounded-3xl hover:shadow-2xl hover:-translate-y-2">
+                  <div className="flex flex-col items-center mb-6">
+                    <div className="relative mb-4">
+                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${member.gradient} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                        <span className="text-xl font-bold text-white">{member.initials}</span>
+                      </div>
+                      <div className="absolute -top-2 -right-2">
+                        <member.icon className="w-6 h-6 p-1 text-blue-600 bg-white rounded-full shadow-lg" />
+                      </div>
+                    </div>
+                    <h3 className="mb-2 text-xl font-bold text-center text-gray-900">{member.name}</h3>
+                    <span className="px-4 py-2 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">
+                      {member.role}
+                    </span>
+                  </div>
+                  
+                  <p className="mb-6 leading-relaxed text-center text-gray-600">
+                    {member.description}
+                  </p>
+                  
+                  <div className="flex justify-center space-x-4">
+                    <a 
+                      href={member.email} 
+                      className="flex items-center px-4 py-2 text-sm font-medium text-blue-700 transition-colors bg-blue-50 rounded-xl hover:bg-blue-100"
+                    >
+                      Email
+                    </a>
+                    <a 
+                      href="#" 
+                      className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 transition-colors bg-gray-50 rounded-xl hover:bg-gray-100"
+                    >
+                      LinkedIn
+                      <ArrowUpRight className="w-4 h-4 ml-1" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Team Member 6 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-                  <span className="text-blue-600 text-2xl font-bold">PG</span>
-                </div>
-                <h3 className="text-xl font-semibold">P. Gunathilake</h3>
-                <p className="text-gray-600">Research Supervisor</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-700 mb-3">
-                  Faculty supervisor providing guidance and academic oversight.
-                </p>
-                <div className="flex justify-center space-x-2">
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    Email
-                  </a>
-                  <span className="text-gray-300">|</span>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
       {/* Institution Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-r from-blue-600 to-blue-800">
+        <div className="absolute inset-0">
+          <div className="absolute w-40 h-40 bg-white rounded-full top-10 left-10 bg-opacity-5"></div>
+          <div className="absolute w-32 h-32 bg-blue-300 rounded-full bottom-10 right-10 bg-opacity-20"></div>
+          <div className="absolute w-24 h-24 bg-white rounded-full top-1/2 left-1/4 bg-opacity-10"></div>
+        </div>
+        
+        <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
-            <GraduationCapIcon className="h-16 w-16 text-blue-600 mb-6" />
-            <h2 className="text-3xl font-bold mb-6">Research Institution</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl">
-              This research was conducted at the Sri Lanka Institute of
-              Information Technology (SLIIT), a leading technology-focused
-              higher education institution.
+            <div className="relative mb-8">
+              <div className="flex items-center justify-center w-24 h-24 mb-6 bg-white bg-opacity-20 rounded-3xl backdrop-blur-sm">
+                <GraduationCap className="w-12 h-12" />
+              </div>
+            </div>
+            <h2 className="mb-6 text-5xl font-black">Research Institution</h2>
+            <p className="max-w-4xl mb-12 text-2xl leading-relaxed text-blue-100">
+              This groundbreaking research was conducted at the Sri Lanka Institute of 
+              Information Technology (SLIIT), a leading technology-focused higher education institution.
             </p>
-            <div className="bg-white p-6 rounded-lg shadow-md max-w-2xl w-full">
-              <h3 className="text-xl font-semibold mb-4">
+            
+            <div className="w-full max-w-4xl p-10 bg-white border border-white shadow-2xl bg-opacity-15 rounded-3xl backdrop-blur-lg border-opacity-20">
+              <h3 className="mb-6 text-3xl font-bold">
                 Sri Lanka Institute of Information Technology
               </h3>
-              <p className="text-gray-600 mb-4">
-                SLIIT is dedicated to advancing research in computing,
-                engineering, and information technology fields, with a focus on
-                developing practical solutions to real-world problems.
+              <p className="mb-8 text-lg leading-relaxed text-blue-100">
+                SLIIT is dedicated to advancing research in computing, engineering, and information 
+                technology fields, with a focus on developing practical solutions to real-world problems.
               </p>
-              <div className="flex justify-center mt-6">
-                <a href="https://www.sliit.lk" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-700 transition-colors">
+              <div className="flex justify-center">
+                <a 
+                  href="https://www.sliit.lk" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center px-8 py-4 font-bold text-blue-700 transition-all duration-300 transform bg-white shadow-lg group rounded-2xl hover:bg-blue-50 hover:shadow-xl hover:-translate-y-1"
+                >
                   Visit Institution Website
+                  <ArrowUpRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:rotate-45" />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* Future Research */}
-      <section className="py-16 bg-blue-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">
-            Future Research Directions
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-xl mb-8">
-              Our team is committed to continuing research in AI-powered
-              recruitment systems, focusing on these key areas:
+      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900">
+        <div className="absolute inset-0">
+          <div className="absolute w-32 h-32 bg-white rounded-full top-20 right-20 bg-opacity-5 animate-pulse"></div>
+          <div className="absolute w-24 h-24 bg-blue-300 rounded-full bottom-20 left-20 bg-opacity-20 animate-bounce"></div>
+        </div>
+        
+        <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <h2 className="mb-6 text-5xl font-black">
+              Future Research 
+              <span className="text-transparent bg-gradient-to-r from-blue-200 to-white bg-clip-text">
+                Directions
+              </span>
+            </h2>
+            <p className="max-w-4xl mx-auto text-2xl leading-relaxed text-blue-100">
+              Our team is committed to pushing the boundaries of AI-powered recruitment systems
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">
-                  Expanded Career Paths
-                </h3>
-                <p className="text-gray-100">
-                  Extending our system to support a wider range of IT career
-                  paths, including cybersecurity, data science, and cloud
-                  computing.
-                </p>
+          </div>
+
+          <div className="grid max-w-6xl grid-cols-1 gap-8 mx-auto md:grid-cols-2">
+            {[
+              {
+                icon: "🌐",
+                title: "Expanded Career Paths",
+                description: "Extending our system to support cybersecurity, data science, and cloud computing roles."
+              },
+              {
+                icon: "⚡",
+                title: "Enhanced Skill Analysis", 
+                description: "Improving assessment of technical and soft skills through sophisticated AI models."
+              },
+              {
+                icon: "🎯",
+                title: "Adaptive Questioning",
+                description: "Dynamic question generation based on real-time candidate performance analysis."
+              },
+              {
+                icon: "🗣️",
+                title: "Multilingual Support",
+                description: "Developing capabilities to support multiple languages for global recruitment."
+              }
+            ].map((item, index) => (
+              <div key={index} className="group">
+                <div className="p-8 transition-all duration-300 transform bg-white border border-white bg-opacity-10 rounded-3xl backdrop-blur-lg border-opacity-20 hover:bg-opacity-20 hover:-translate-y-2">
+                  <div className="mb-4 text-4xl">{item.icon}</div>
+                  <h3 className="mb-4 text-2xl font-bold transition-colors group-hover:text-blue-200">
+                    {item.title}
+                  </h3>
+                  <p className="text-lg leading-relaxed text-blue-100">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">
-                  Enhanced Skill Analysis
-                </h3>
-                <p className="text-gray-100">
-                  Improving the assessment of both technical and soft skills
-                  through more sophisticated AI models.
-                </p>
-              </div>
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">
-                  Adaptive Questioning
-                </h3>
-                <p className="text-gray-100">
-                  Implementing dynamic question generation based on real-time
-                  candidate performance.
-                </p>
-              </div>
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">
-                  Multilingual Support
-                </h3>
-                <p className="text-gray-100">
-                  Developing capabilities to support multiple languages for
-                  global recruitment needs.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default About;

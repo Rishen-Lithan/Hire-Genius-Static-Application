@@ -1,12 +1,35 @@
-import React from 'react';
-import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from 'lucide-react';
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+
 const Contact = () => {
-  return <div className="w-full bg-white">
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message! We will get back to you soon.");
+  };
+
+  return (
+    <div className="w-full bg-white">
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
-            <MailIcon className="h-16 w-16 mb-6" />
+            <Mail className="h-16 w-16 mb-6" />
             <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
             <p className="text-xl max-w-3xl">
               Get in touch with our research team to learn more about HireGenius
@@ -15,6 +38,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Form and Info */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,48 +46,96 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:w-2/3">
               <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Full Name
                     </label>
-                    <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Your name" />
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Your name"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Email Address
                     </label>
-                    <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="your.email@example.com" />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="your.email@example.com"
+                    />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Subject
                   </label>
-                  <input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="What is this regarding?" />
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="What is this regarding?"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Message
                   </label>
-                  <textarea id="message" rows={6} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Your message here..."></textarea>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Your message here..."
+                  />
                 </div>
                 <div>
-                  <button type="submit" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    <SendIcon className="h-5 w-5 mr-2" />
+                  <button
+                    onClick={handleSubmit}
+                    className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    <Send className="h-5 w-5 mr-2" />
                     Send Message
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
+
             {/* Contact Information */}
             <div className="lg:w-1/3">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex">
-                    <MailIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                    <Mail className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-800">Email</h3>
                       <p className="text-gray-600">
@@ -72,14 +144,14 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex">
-                    <PhoneIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                    <Phone className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-800">Phone</h3>
                       <p className="text-gray-600">+94 11 754 4801</p>
                     </div>
                   </div>
                   <div className="flex">
-                    <MapPinIcon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                    <MapPin className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-800">Address</h3>
                       <p className="text-gray-600">
@@ -97,49 +169,57 @@ const Contact = () => {
                     Research Team
                   </h3>
                   <ul className="space-y-3 text-gray-600">
-                    <li>N. A. Hewamadduma - Lead Researcher</li>
-                    <li>G. K. Nalinka - NLP Specialist</li>
-                    <li>N. T. M. A. S. M. Mahawaththa - Data Scientist</li>
-                    <li>S. R.T.L Rosa - UI/UX Designer</li>
-                    <li>D. I. De Silva - Backend Developer</li>
+                    <li>D. I. De Silva - Professor</li>
                     <li>P. Gunathilake - Research Supervisor</li>
+                    <li>N. A. Hewamadduma - Researcher</li>
+                    <li>G. K. Nalinka - Researcher</li>
+                    <li>N. T. M. A. S. M. Mahawaththa - Researcher</li>
+                    <li>S. R.T.L Rosa - Researcher</li>
                   </ul>
                 </div>
               </div>
-              <div className="mt-6 bg-blue-50 p-6 rounded-lg border border-blue-100">
-                <h3 className="font-semibold text-blue-800 mb-2">
-                  Looking for Collaborations
-                </h3>
-                <p className="text-blue-700">
-                  We're interested in collaborating with industry partners and
-                  academic institutions on further developing AI-powered
-                  recruitment technologies.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Map Section */}
+
+      {/* Interactive Map Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-8 text-center">Our Location</h2>
-          <div className="h-96 bg-gray-200 rounded-lg overflow-hidden">
-            {/* This would be replaced with an actual map in a production environment */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-300">
-              <div className="text-center">
-                <MapPinIcon className="h-12 w-12 text-gray-500 mx-auto mb-2" />
-                <p className="text-gray-700 font-medium">
-                  Map would be displayed here
-                </p>
-                <p className="text-gray-600">
-                  Sri Lanka Institute of Information Technology, Malabe
-                </p>
-              </div>
+          <div className="h-96 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798947321186!2d79.97036731477389!3d6.914682094993648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596d3cb77957%3A0x8ac3afb2f02b4ca5!2sSLIIT%20Malabe%20Campus!5e0!3m2!1sen!2slk!4v1621234567890!5m2!1sen!2slk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SLIIT Location Map"
+            />
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 mb-2">
+              <MapPin className="inline h-5 w-5 text-blue-600 mr-2" />
+              HireGEnius PVT Ltd
+            </p>
+            <p className="text-gray-600">New Kandy Road, Malabe, Sri Lanka</p>
+            <div className="mt-4">
+              <a
+                href="https://www.google.com/maps/dir//SLIIT+Malabe+Campus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                <MapPin className="h-4 w-4 mr-2" />
+                Get Directions
+              </a>
             </div>
           </div>
         </div>
       </section>
+
       {/* FAQ Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,6 +273,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -203,11 +284,16 @@ const Contact = () => {
             Contact our research team to schedule a demonstration or discuss
             potential applications of HireGenius in your organization.
           </p>
-          <a href="mailto:nuwandihewamadduma@gmail.com" className="inline-block bg-white text-blue-700 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors">
+          <a
+            href="mailto:nuwandihewamadduma@gmail.com"
+            className="inline-block bg-white text-blue-700 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors"
+          >
             Email Us Today
           </a>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;

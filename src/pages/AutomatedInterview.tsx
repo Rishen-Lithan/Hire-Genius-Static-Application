@@ -161,7 +161,7 @@ const AutomatedInterview = () => {
               <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right order-1 md:order-1">
                 <div className="bg-white p-4 rounded-lg shadow-md">
                   <p className="text-gray-700">
-                    Questions dynamically adjust based on candidate responses,
+                    Level based questions on candidate responses,
                     ensuring comprehensive skill assessment.
                   </p>
                 </div>
@@ -174,7 +174,7 @@ const AutomatedInterview = () => {
                   Technical Questions
                 </h3>
                 <p className="text-gray-600">
-                  Candidates answer questions of varying difficulty levels
+                  Candidates answer questions of varying levels
                   across relevant technical domains.
                 </p>
               </div>
@@ -247,26 +247,13 @@ const AutomatedInterview = () => {
                 <div>
                   <div className="flex justify-between mb-1">
                     <span className="text-gray-700 font-medium">
-                      Training Accuracy
-                    </span>
-                    <span className="text-blue-600 font-medium">99.5%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div className="bg-blue-600 h-2.5 rounded-full" style={{
-                    width: '99.5%'
-                  }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 font-medium">
                       Test Accuracy
                     </span>
-                    <span className="text-blue-600 font-medium">90%</span>
+                    <span className="text-blue-600 font-medium">92.5%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-blue-600 h-2.5 rounded-full" style={{
-                    width: '90%'
+                    width: '92%'
                   }}></div>
                   </div>
                 </div>
@@ -275,11 +262,11 @@ const AutomatedInterview = () => {
                     <span className="text-gray-700 font-medium">
                       Training Loss
                     </span>
-                    <span className="text-blue-600 font-medium">0.0204</span>
+                    <span className="text-blue-600 font-medium">0.5</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-blue-600 h-2.5 rounded-full" style={{
-                    width: '2%'
+                    width: '5%'
                   }}></div>
                   </div>
                 </div>
@@ -289,12 +276,12 @@ const AutomatedInterview = () => {
                       Validation Accuracy Range
                     </span>
                     <span className="text-blue-600 font-medium">
-                      79.7% - 95.3%
+                      93%
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-blue-600 h-2.5 rounded-full" style={{
-                    width: '87.5%'
+                    width: '93%'
                   }}></div>
                   </div>
                 </div>
@@ -313,11 +300,11 @@ const AutomatedInterview = () => {
                   <span className="text-gray-700 font-medium">
                     Average Accuracy
                   </span>
-                  <span className="text-blue-600 font-medium">85%</span>
+                  <span className="text-blue-600 font-medium">60%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div className="bg-blue-600 h-2.5 rounded-full" style={{
-                  width: '85%'
+                  width: '60%'
                 }}></div>
                 </div>
               </div>
@@ -385,7 +372,7 @@ const AutomatedInterview = () => {
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
                     <BrainIcon className="h-6 w-6 text-blue-600 mr-2" />
-                    <span className="font-semibold">Answer Accuracy</span>
+                    <span className="font-semibold">Theoretical Answer Accuracy</span>
                   </div>
                   <span className="font-bold">60%</span>
                 </div>
@@ -399,41 +386,15 @@ const AutomatedInterview = () => {
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
                     <SmileIcon className="h-6 w-6 text-blue-600 mr-2" />
-                    <span className="font-semibold">Engagement Level</span>
+                    <span className="font-semibold">Coding Answer Accuracy</span>
                   </div>
-                  <span className="font-bold">25%</span>
+                  <span className="font-bold">40%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4">
                   <div className="bg-blue-600 h-4 rounded-full" style={{
                   width: '25%'
                 }}></div>
                 </div>
-              </div>
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center">
-                    <ClockIcon className="h-6 w-6 text-blue-600 mr-2" />
-                    <span className="font-semibold">Response Time</span>
-                  </div>
-                  <span className="font-bold">15%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div className="bg-blue-600 h-4 rounded-full" style={{
-                  width: '15%'
-                }}></div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <p className="text-gray-700 mb-2">
-                Each component is normalized to a 0-100 scale before applying
-                the weighted formula:
-              </p>
-              <div className="bg-gray-100 p-4 rounded-md">
-                <code className="font-mono text-blue-800">
-                  Final Score = (0.6 × Answer Accuracy) + (0.25 × Engagement) +
-                  (0.15 × Response Time)
-                </code>
               </div>
             </div>
           </div>
